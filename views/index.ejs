@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title> Create Room </title>
+  <script type="text/javascript">
+    const enterRoom = () => {
+      const roomId = document.getElementById('room').value;
+      const userName = document.getElementById('userName').value;
+      window.location.href = `room/${roomId}?userName=${userName}`;
+    };
+  </script>  
+</head>
+<body>
+  <input type="text" name="room" id="room" placeholder="room">
+  <input type="text" name="userName" id="userName" placeholder="name">
+  <button onclick="enterRoom()">Enter Room</button>
+</body>
+</html>  

@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title> Chat Room </title>
+  <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>  
+  <script type="text/javascript">
+    const apiKey = '<%=apiKey%>';
+    const sessionId = '<%=sessionId%>';
+    const token = '<%=token%>';
+    const userName = '<%=userName%>';
+  </script>
+  <script src="/js/opentok.js"></script>
+  <style>
+    .mainContainer {
+      display: flex;
+      width: 100%;
+      height: 1000px;
+      background-color: #add8e6;
+    }
+    .pub-video {
+      position: absolute;
+      z-index: 1001;
+      overflow: hidden;
+      border-radius: 15px;
+      top: 50px;
+      left: 100px;
+    }
+    .sub-video {
+      position: absolute;
+      z-index: 1001;
+      min-width: 200px;
+      min-height: 150px;
+      overflow: hidden;
+      border-radius: 15px;
+      top: 50px;
+      right: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mainContainer">
+    <div class="pub-video">
+      <div id="publisher"></div>
+    </div>
+    <div class="sub-video">
+      <div id="subscriber"></div>
+    </div>
+  </div>    
+</body>  
+</html>
+  
